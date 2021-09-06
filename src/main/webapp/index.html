@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>COSMOS</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <!--  현재접속한 디바이스 해상도에 맞게 보여준다 / 장치의 너비와 일치| (모니터 테블릿 모바일) / 기본적으로 초기비율(일반비율)로 설정  -->
+  
+  <link rel="stylesheet" href="resources/css/bootstrap.css">
+  <link rel="stylesheet" href="resources/com/style.css">
+  <script src="resources/js/jquery/jquery-3.6.0.min.js"></script>
+  <script src="resources/js/jquery/jquery.dataTables.min.js"></script>
+  <script src="resources/js/bootstrap/bootstrap.js"></script>
+  <script src="resources/js/bootstrap/bootstrap.min.js"></script>
+  	
+  
+</head>
+<body>
+
+
+
+				<nav class="navbar navbar-default">
+					<div class="container-fluid"> <!-- fluid 는 가로 해상도에 상관없이 100%의 width를 갖는다 -->
+						<div class="navbar-header"><!-- 네비게이션바에 헤더부분역할을 하는 클래스 -->
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+								data-target="#bs-example-navbar-collapse-1" aria-expanded="false">  <!-- 가장 기본적인 네비게이션바를 만드는 기본태그 -->
+						 		<span class="sr-only"></span> <!-- 화면상에서는 보이지않지만 검색엔진에서는 클래스명이 적용된 텍스트를 그대로 읽어온다. -->
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="index.html">COSMOS</a>
+						</div>
+						<div class="collapse navbar-collapse" id="bs-exaple-navbar-collapse-1">
+							<ul class="nav navbar-nav navbar-center">
+								<li><a href="cosmos/com/introduce.html">소개</a></li>
+								<li><a href="cosmos/com/review.html">리뷰</a></li>
+								<li class="dropdown">
+									<a href="index.html" class="dropdown-toggle" data-toggle="dropdown" role="button"
+										aria-haspopup="true" aria-expanded="false">상품 카테고리<span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li><a href="cosmos/menubar/cosmos_skin.html">스킨</a></li>
+										<li><a href="cosmos/menubar/cosmos_lotion.html">로션</a></li>
+										<li><a href="cosmos/menubar/cosmos_cream.html">크림</a></li>
+										<li><a href="cosmos/menubar/cosmos_suncream.html">썬크림</a></li>
+									</ul>
+								</li>
+							</ul>
+						<form class="navbar-form navbar-left">
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="내용을 입력하세요.">
+								</div>
+									<button type="submit" class="btn btn-default">검색</button>
+						</form>						
+							<ul class="nav navbar-nav navbar-right">
+								<li><a href="cosmos/com/loginForm.html">로그인</a></li>
+								<li><a href="cosmos/com/signupForm.html">회원가입</a></li>
+							</ul>
+						</div>
+					</div>
+				</nav> 
+				<div style="position:relative;">
+					<div id="divId">
+						
+					</div>
+				</div>
+					<div class="container">
+						<div class="jumbotron">
+						  <h1 class="text-center">COSMOS</h1>
+						  <p class="text-center">COST SAVING MOIST SKIN</p>
+					</div>		
+							<div class="row">
+							    	<div class="col-sm-3">
+								      <img class="img-responsive center-block" alt="상품1" src="/resources/image/1.jpg" style="width: 300px; height: 150px;">
+								      <h3><a href="/cosmos/mainImg/cosmos_main.html">세트(1)</a></h3>
+								    </div>
+								    
+								    <div class="col-sm-3">
+								      <img class="img-responsive center-block" alt="상품2" src="/resources/image/2.jpg" style="width: 300px; height: 150px;">
+								      <h3><a href="/cosmos/mainImg/cosmos_main.html">세트(2)</a></h3>
+								    </div>
+								    
+								    <div class="col-sm-3">
+								      <img class="img-responsive center-block" alt="상품3" src="/resources/image/3.jpg" style="width: 300px; height: 150px;">
+								      <h3><a href="/cosmos/mainImg/cosmos_main.html">세트(3)</a></h3>        
+							   		</div>
+							   		
+								    <div class="col-sm-3">
+								      <img class="img-responsive center-block" alt="상품3" src="/resources/image/4.jpg" style="width: 300px; height: 150px;">
+								      <h3><a href="/cosmos/mainImg/cosmos_main.html">세트(4)</a></h3>        
+							   		</div>
+							  </div>
+							  
+							  
+							  <h1 class="mt-4" >COSMOS 회원목록</h1>
+                   	 <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0 form-right">
+                                    <div class="input-group">
+                                        <div >
+                                            <a class="btn btn-primary btn-block" id="btn">조회</a>
+                                        </div>
+                                    </div>
+                                </form>
+                         	<br>
+							  	<div class="card-body">
+                                	<div class="table-responsive"> 
+	                                    <table class="table table-bordered DataTable" id="dataTable">
+	                                        <thead>
+	                                            <tr>
+	                                                <th>아이디</th>
+	                                                <th>비번</th>
+	                                                <th>이름</th>                                                
+	                                                <th>주소</th>
+	                                                <th>email</th>
+	                                            </tr>
+	                                        </thead>  
+	                                         <tfoot>
+	                                            <tr>
+	                                                <th>아이디</th>
+	                                                <th>비번</th>
+	                                                <th>이름</th>                                                
+	                                                <th>주소</th>
+	                                                <th>email</th>
+	                                            </tr>
+	                                        </tfoot>	                                   
+	                                       </table>
+	                                        
+	                                    <div id="pager" class="pager">
+	                                          <ul id="pagination" class="pagination pagination-sm"></ul>
+                                    </div>
+                                </div>
+                            </div>
+						</div>
+							
+					<footer style="background-color: #000000; color: #ffffff">
+						<div class="container">
+							<br>
+							<div class="row">
+								<div class="col-sm-2" style="text-align: center;"><h5>Copyright &copy; 2021</h5><h5>신희범(hbshin)</h5></div>
+								<div class="col-sm-4"><h4>대표자 소개</h4><P>COSMOS 대표 신희범입니다. <br>천연화장품 쇼핑몰 입니다.</P></div>
+								<div class="col-sm-2"><h4 style="text-align: center;">네비게이션</h4>
+									<div class="list-group">
+										<a href="#" class="list-group-item">소개</a>
+										<a href="#" class="list-group-item">리뷰</a>
+										<a href="#" class="list-group-item">상품</a>
+									</div>
+								</div>
+						<div class="col-sm-2"><h4 style="text-align: center;">SNS</h4>
+									<div class="list-group">
+										<a href="#" class="list-group-item">FACEBOOK</a>
+										<a href="#" class="list-group-item">YOUTUBE</a>
+										<a href="#" class="list-group-item">NAVER TV</a>
+									</div>
+								</div>						
+								 <div class="col-sm-2"><h4 style="text-align: center;"><span class="glyphicon glyphicon-ok"></span>&nbsp;by 신희범</h4></div>
+							</div>
+						</div>
+					</footer>
+					<script src="resources/js/cosmos/com/index.js"></script>
+</body>
+</html>
+
+

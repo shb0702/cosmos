@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+                <main>
+                
+                    <div class="container-pop">
+                        <div class="justify-content-center" style = "overflow: auto;">
+                            <div class="">
+                                <div class="card shadow-lg border-0 rounded-lg mt-0">
+                                    <div class="card-body">
+                                        <form id="form-customer-regist">
+                                            <div class="form-group">
+                                                <label class="small mb-1" for="compNm">회사명</label>
+                                                <input class="form-control py-4" id="compNm" type="text" placeholder="Enter compNm" maxlength="50" required />
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <label class="small mb-1" for="compTel">회사 번호</label>
+                                                <input class="form-control py-4" id="compTel" placeholder="숫자만 입력해주세요"  maxlength="12" addon-inputType="number" />
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <label class="small mb-1" for="compAddr">회사 주소</label>
+                                                <input class="form-control py-4" id="compAddr" placeholder="Enter compAddr" maxlength="50"  />
+                                            </div>  
+                                            
+                                            <div class="form-group">
+                                                <label class="small mb-1" for="compFax">회사 팩스번호</label>
+                                                <input class="form-control py-4" id="compFax" placeholder="숫자만 입력해주세요" maxlength="50" addon-inputType="number" />
+                                            </div>                        
+                                            <div class="form-group">
+                                                <label class="small mb-1" for="cstmNm">담당자명</label>
+                                                <input class="form-control py-4" id="cstmNm" placeholder="Enter cstmNm" maxlength="50" required />
+                                            </div>                        
+                                            <div class="form-group">
+                                                <label class="small mb-1" for="cstmTel">담당자 번호</label>
+                                                <input class="form-control py-4" id="cstmTel" placeholder="숫자만 입력해주세요" maxlength="50" required addon-inputType="number"/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="small mb-1" for="cstmEmail">담당자 이메일</label>
+                                                <input class="form-control py-4" id="cstmEmail" placeholder="Enter cstmEmail" maxlength="50" required addon-inputType="email" />
+                                            </div>   
+                                            <div class="form-group">
+                                                <label class="small mb-1" for="cstmPic">고객사 담당자 ID</label>
+                                                    <span class="input-group-append">
+		                                                <input class="form-control py-4" id="cstmPic" placeholder="Enter cstmPic" validation-name="고객사 담당자 ID" maxlength="50" required readonly/>
+		                                                <button class="btn btn-primary btn-cstmPic-search" type="button" id="g-popup"><i class="fas fa-search"></i></button>
+                                                    </span>
+                                            </div>   
+
+											<div class="form-group mt-2 mb-0"><a class="btn btn-primary btn-block btn-customer-account">등록</a></div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                
+                <script src="/resources/js/cosmos/com/btnpop.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cosmos.mapper.CosmosMapper">
+
+
+	<insert id="Insert" parameterType="cosmos.dto.CosmosDto">
+		insert into cosmos(id, pw, name, addr, email) values (#{id}, #{pw}, #{name}, #{addr}, #{email})
+	</insert>
+
+	<select id="cosmosList" resultType="cosmos.dto.CosmosDto">
+		select * from cosmos;
+	</select>
+
+	<update id="update" parameterType="cosmos.dto.CosmosDto">
+		update cosmos set id=#{id}, ppname=#{name}, addr=#{addr}, email=#{email}
+	</update>
+
+	<delete id="delete" parameterType="cosmos.dto.CosmosDto">
+		delete from cosmos
+	</delete>
+
+
+</mapper> 
